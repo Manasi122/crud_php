@@ -1,0 +1,55 @@
+SELECT emp.id , inter.name
+FROM emp
+INNER JOIN inter ON emp.ID = inter.emp.ID;
+
+
+
+SELECT c_interest.empid,c_interest.i_id,interest.interest
+FROM (c_interest
+INNER JOIN interest ON c_interest.i_id = interest.i_id);
+
+
+SELECT c_program.empid,c_program.p_id,program.programs
+FROM (c_program
+INNER JOIN program ON c_program.p_id = program.p_id);
+
+
+
+SELECT `empid`,`full name`, `email`,`contact no`,`gender`,`images`,`city`,`address` FROM `employee`
+
+select interest from interest_view
+
+
+select  `employee.empid`,`employee.full name`, `employee.email`,`employee.contact no`,`employee.gender`,`employee.images`,`employee.city`,`employee.address`,`interest_view.interest` from employee INNER JOIN interest_view on employee.empid = interest_view.empid
+
+
+
+
+select employee.empid,employee.`full name`, employee.email,employee.`contact no`,employee.`gender`,employee.images,employee.city,employee.address,interest_view.interest from employee INNER JOIN interest_view on employee.empid = interest_view.empid;
+
+
+
+select  employee.empid,employee.`full name`, employee.email,employee.`contact no`,employee.`gender`,employee.images,employee.city,employee.address,interest_view.interest from employee INNER JOIN interest_view on employee.empid = interest_view.empid
+
+
+
+
+
+		DELETE FROM `c_interest` WHERE `c_interest`.`c_int_id` = 14"
+
+
+
+		SELECT e.`empid`, `full name`, `email`, `contact no`, `gender`, `images`, `city`, `address`, `GROUP_CONCAT(cp. SEPARATOR ',')` FROM `employee` as e INNER JOIN c_program as cp on e.empid = cp.empid INNER JOIN c_interest as ci on e.empid = ci.empid;
+
+
+
+
+
+
+		const program = document.querySelectorAll('.program:checked');
+            if (program.length > 3) {
+                alert('You cannot select more than 3 books');
+                return false;
+            } else if (!program.length) {
+                alert('Please, check at least one checkbox!');
+            }
